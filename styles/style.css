@@ -4,15 +4,17 @@ body{
     background-color:  #E5E5E5;
 }
 main{
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 .first-section{
     background-color:  #FFFFFF;
-    padding: 0 30px 57px 30px;
+    padding: 23px 0 57px 30px;
     margin-top: 23px;
+    margin-right: 0;
     border-radius: 5px;
+    width: 840px;
 
 
     /* -----------top players--------------- */
@@ -43,6 +45,7 @@ h1{
 }
 hr{
     margin-top: 0;
+    margin-left: 0;
     width: 807px;
     border: 1px solid #D1D1D1;
 }
@@ -87,6 +90,7 @@ span{
     padding: 0 30px 57px 30px;
     border-radius: 5px;
     margin-top: 23px;
+    width: 810px;
 }
 .courses{
     display: grid;
@@ -138,4 +142,30 @@ span{
 .course-info span{
     font-size: 15px;
     color: #A2A2A2;
+}
+
+/* media quary */
+@media only screen and (max-width:688px) {
+    .first-section{
+        width: 100%; 
+    }
+    .players{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .blogs{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 50px;
+        grid-row-gap: 30px;
+    }
+    .blog{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
